@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //alert('hello world');  
+        //数组练习
+        var ary1 = [1,2,3,4,5];
+        //alert(ary1.length);
+        ary1.length = 6;
+        console.log(ary1);
+
+        // ary.indexOf 返回指定的值在数组中的index + 1
+
+        ary1.push('在最末尾增加一个元素');
+        ary1.pop();//删除最后的一个元素，并且返回
+        ary1.unshift('在数组的第一个元素前面新增元素');//在第一个元素之前增加元素
+        ary1.shift();//删除第一个元素并返回
+        ary1.sort();//按照默认的方式将数组进行排序
+        ary1.reverse();//将数组调转
+        console.log(ary1);
+
+        //splice 方法
+        var arr = ['Microsoft', 'Apple', 'Yahoo', 'AOL', 'Excite', 'Oracle'];
+        console.log(arr.splice(2,2));//从下标2开始删除，删除两个元素，并返回这两个元素
+        console.log(arr);
+        arr.splice(2,2,'哈哈','豆豆');//从下标2开始删除，删除两个元素，并且新增两个元素，返回删除掉的两个元素
+        console.log(arr);
+        console.log( arr.concat([1,2,3]));//将两个数组连接起来 并且返回连接后的数组，这时候不会改变原有数组
+        arr.join(',');//按照指定字符串将数组进行拼接
+    </script>
+</body>
+
+</html>
