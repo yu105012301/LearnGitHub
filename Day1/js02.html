@@ -1,15 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        //js对象
-        
+        //js对象  定义对象
+        var student = {
+            name: '小明', //定义属性
+            age: 18,
+            height: 1.85,
+            width: 75,
+            score: null
+        }
+
+        console.log(student.name); //打印属性值
+        console.log(student['age']);
+        delete student.name; //删除对象的某个属性，因为js对象是动态的，所以可以随意增删对象属性
+        console.log(student);
+
+        //查看一个属性是否在这个对象里
+        var isHaveProp = student.hasOwnProperty('width');
+        console.log(isHaveProp);
+
+        //练习题
+        // var height = parseFloat(prompt('请输入身高：'));
+        // var weight = parseFloat(prompt('请输入体重：'));
+        // var bmi = weight / (height * height);
+        // if (bmi < 18.5) {
+        //     alert('过轻');
+        // } else if (bmi >= 18.5 && bmi < 25) {
+        //     alert('正常');
+        // } else if (bmi >= 25 && bmi < 32) {
+        //     alert('肥胖');
+        // } else {
+        //     alert('严重肥胖');
+        // }
+
+        // for循环计算1*2*3*...*10
+        var tempX = 1;
+        for (var i = 1; i <= 10; i++) {
+            tempX = tempX * i;
+        }
+        console.log(tempX);
+
+        //定义MAP，类似C#的键值对
+        var myMap = new Map();
+        myMap.set('db', 88); //为键值对进行赋值
+        console.log(myMap.get('db'));
+        myMap.delete('db'); //删除这个键
+        console.log(myMap.get('db'));
     </script>
 </body>
+
 </html>
