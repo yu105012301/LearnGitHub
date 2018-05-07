@@ -53,8 +53,14 @@
         var myMap = new Map();
         myMap.set('db', 88); //为键值对进行赋值
         console.log(myMap.get('db'));
-        myMap.delete('db'); //删除这个键
-        console.log(myMap.get('db'));
+        // myMap.delete('db'); //删除这个键
+        //console.log(myMap.get('db'));
+
+        // 遍历map,set,arraylist
+
+        for (var i of myMap) {
+            console.log(i[0] + " = " + i[1]);
+        }
     </script>
 </body>
 

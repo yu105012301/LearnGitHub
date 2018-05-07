@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js方法</title>
+</head>
+
+<body>
+
+    <script>
+        //变量的方式定义一个方法
+        var myFunc = function(index) {
+            var parames = arguments; //arguments，代表这传递进来的参数集合，可以用for in 进行循环查看
+            console.log(index);
+            console.log(parames);
+            for (var x of parames) {
+                console.log(x);
+            }
+        };
+
+        myFunc(123, 'haha', 'doudou');
+    </script>
+</body>
+
+</html>
