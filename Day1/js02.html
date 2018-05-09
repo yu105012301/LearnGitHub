@@ -61,6 +61,23 @@
         for (var i of myMap) {
             console.log(i[0] + " = " + i[1]);
         }
+        myMap.delete('db'); //删除这个键
+        console.log(myMap.get('db'));
+
+        var myApp = {};
+
+        myApp.Person = {
+                personName: '人的名字',
+                personAge: 18,
+                address: '大连市'
+            }
+            //解构赋值
+        var {
+            personName: myName,
+            personAge: myAge,
+            address: myAddress
+        } = myApp.Person;
+        console.log(myName + '___' + myAge + '___' + myAddress);
     </script>
 </body>
 

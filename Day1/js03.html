@@ -22,6 +22,44 @@
         };
 
         myFunc(123, 'haha', 'doudou');
+        window.alert('这个是系统的alert');
+        var oldAlert = window.alert;
+        window.alert = function() {
+            oldAlert('已经没有办法正常显示alert了');
+        }
+        window.alert();
+        window.alert = oldAlert;
+        alert('正常了')
+
+        var stuInfo = {
+            name: 'xiaoming',
+            age: 12,
+            classes: '三年二班'
+        };
+
+
+
+        var person = {
+            name: '小明',
+            age: 20,
+            gender: 'male',
+            passport: 'G-12345678',
+            school: 'No.4 middle school'
+        };
+
+        var aryList = [1, 2, 3, [4, 5, 6]]
+        var [x, y, z, [q, w, e]] = aryList;
+        console.log(x);
+
+        var myApp = {};
+        myApp.Person = {
+            name: 'Myapp'
+        }
+        var {
+            name: myAppName
+        } = myApp.Person;
+
+        console.log(name);
     </script>
 </body>
 
